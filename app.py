@@ -48,13 +48,6 @@ body {
     font-size: 18px;
     line-height: 1.6;
 }
-
-/* Centralizar imagem */
-.img-center {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
 </style>
 """, unsafe_allow_html=True)
 
@@ -62,10 +55,11 @@ body {
 st.markdown('<p class="title">🎭 Encontro de Jovens nas Escolas</p>', unsafe_allow_html=True)
 st.markdown('<p class="subtitle">EJE</p>', unsafe_allow_html=True)
 
-# ===== IMAGEM =====
-st.markdown('<div class="img-center">', unsafe_allow_html=True)
-st.image("img/image - 2026-04-29T123204.035.png", width=250)
-st.markdown('</div>', unsafe_allow_html=True)
+# ===== IMAGEM CENTRALIZADA (AJUSTE AQUI) =====
+col1, col2, col3 = st.columns([1, 2, 1])
+
+with col2:
+    st.image("img/image - 2026-04-29T123204.035.png", width=250)
 
 # ===== SOBRE =====
 st.markdown('<div class="card">', unsafe_allow_html=True)
