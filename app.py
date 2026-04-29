@@ -18,7 +18,7 @@ body {
     background-color: #0e1117;
 }
 
-/* Título principal */
+/* Título */
 .title {
     text-align: center;
     font-size: 42px;
@@ -39,7 +39,7 @@ body {
     background-color: #1c1f26;
     padding: 25px;
     border-radius: 15px;
-    margin-top: 20px;
+    margin-top: 25px;
     box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
 }
 
@@ -48,6 +48,12 @@ body {
     font-size: 18px;
     line-height: 1.6;
 }
+
+/* Imagem bonita */
+img {
+    border-radius: 15px;
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.6);
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -55,11 +61,14 @@ body {
 st.markdown('<p class="title">🎭 Encontro de Jovens nas Escolas</p>', unsafe_allow_html=True)
 st.markdown('<p class="subtitle">EJE</p>', unsafe_allow_html=True)
 
-# ===== IMAGEM CENTRALIZADA (AJUSTE AQUI) =====
-col1, col2, col3 = st.columns([1, 2, 1])
+# ===== IMAGEM CENTRALIZADA E MAIOR =====
+col1, col2, col3 = st.columns([1, 4, 1])
 
 with col2:
-    st.image("img/image - 2026-04-29T123204.035.png", width=250)
+    st.image(
+        "img/image - 2026-04-29T123204.035.png",
+        use_column_width=True
+    )
 
 # ===== SOBRE =====
 st.markdown('<div class="card">', unsafe_allow_html=True)
